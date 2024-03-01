@@ -1,19 +1,17 @@
 import reflex as rx
+from link_bio.styles.styles import Size
 
 
 def navbar() -> rx.Component:
-    return rx.box(
-        rx.hstack(
-            rx.text(
-                "Logística Woodward",
-                height="40px"
-            ),
-            position="sticky",
-            bg="red",
-            padding_x="16px",
-            padding_y="8px",
-            z_index="999"
+    return rx.hstack(
+        rx.link(
+            rx.image(src="/logo_full.png", width="160px", height="auto"),
+            href="#",
         ),
-        width="100%",
+        position="sticky",
+        top="0",
+        bg="#f5f5f5",
+        padding_x=Size.DEFAULT.value,
+        padding_y=Size.SMALL.value,
+        z_index="999",
     )
-
