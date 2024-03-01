@@ -1,41 +1,45 @@
 import reflex as rx
-from link_bio.components.link_button import link_button
+from link_bio.components.headband import headband
+from link_bio.styles.styles import BASE_COLORS
 
 
 def header() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.avatar(src="logo.svg", fallback="LW", size="9", radius="full"),
+            rx.avatar(
+                src="logo.svg",
+                fallback="LW",
+                size="9",
+                radius="small",
+                border=f"1px solid {BASE_COLORS.WHITE.value}",
+            ),
             rx.vstack(
-                rx.vstack(
-                    rx.heading(
-                        "Go, we've got you covered",
-                        size="8",
-                        weight="bold",
-                        color="rgb(0 80 156)",
-                        as_="h2"
-                    ),
-                    rx.heading("@logisticawoodward", size="5", weight="bold", margin_top="0", as_="h1"),
-                    spacing="0",
+                rx.heading(
+                    "Go, we've got you covered",
+                    size="8",
+                    weight="bold",
+                    color=BASE_COLORS.WHITE.value,
+                    as_="h2"
                 ),
-                rx.hstack(
-                    rx.badge(
-                        rx.flex(
-                            rx.icon(tag="phone", size=25),
-                            rx.vstack(
-                                rx.text("+52 33 3793 8888", color="#fff", size="2"),
-                                align="center"
-                            ),
-                            spacing="2",
-                        ),
-                        variant="solid",
-                        color="rgb(2, 39, 74)",
-                        padding="10px",
-                    ),
-                    margin_top="15px",
+                rx.heading(
+                    "@logisticawoodward",
+                    size="5",
+                    weight="bold",
+                    color=BASE_COLORS.YELLOW.value,
+                    margin_top="0",
+                    as_="h1"
                 ),
+                spacing="0",
             ),
             align="center",
+        ),
+        rx.flex(
+            headband("+14", "años de experiencia"),
+            headband("+14", "años de experiencia"),
+            headband("+14", "años de experiencia"),
+            width="100%",
+            direction="row",
+            justify="between"
         ),
         rx.text(
             "En ",
@@ -45,7 +49,5 @@ def header() -> rx.Component:
                 Nos dedicamos a entender y atender las necesidades específicas
                 de cada cliente, asegurando que sus operaciones sean sinónimo de
                 eficiencia y confiabilidad.""", as_="p"),
-        rx.text("""Somos un grupo de logística aduanal de clase mundial.
-                Nuestra experiencia, innovación y servicio personalizado
-                nos convierten en el mejor aliado.""", as_="p"),
+        spacing="3",
     )
