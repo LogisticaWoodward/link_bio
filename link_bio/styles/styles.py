@@ -4,8 +4,12 @@ from enum import Enum
 # Constants
 MAX_WIDTH = "600px"
 
-# Background
-# rgb(2, 39, 74)
+# Colors
+class BASE_COLORS(Enum):
+    WHITE = "#FCFCFC"
+    RED = "#ED1C24"
+    BLUE = "#00509C"
+    YELLOW = "#FA9F42"
 
 # Sizes
 class Size(Enum):
@@ -21,11 +25,15 @@ BASE_STYLE = {
         "height": "100%",
         "display": "block",
         "padding": Size.SMALL.value,
+    },
+    rx.text: {
+        "color": BASE_COLORS.WHITE.value
     }
 }
 
 title_style = dict(
     width="100%",
+    color=BASE_COLORS.WHITE.value,
     padding_top=Size.DEFAULT.value
 )
 
