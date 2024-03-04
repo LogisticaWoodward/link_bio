@@ -65,4 +65,5 @@ def links() -> rx.Component:
             "blue"
         ),
         width="100%",
+        spacing="3",
     )

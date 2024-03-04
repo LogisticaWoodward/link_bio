@@ -32,6 +32,7 @@ def header() -> rx.Component:
                 spacing="0",
             ),
             align="center",
+            spacing="5",
         ),
         rx.flex(
             headband("+14", "años de experiencia"),
