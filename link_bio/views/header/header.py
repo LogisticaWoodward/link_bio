@@ -1,6 +1,6 @@
 import reflex as rx
 from link_bio.components.headband import headband
-from link_bio.styles.styles import BASE_COLORS
+from link_bio.styles.colors import BASE_COLORS
 
 
 def header() -> rx.Component:
@@ -17,15 +17,13 @@ def header() -> rx.Component:
                 rx.heading(
                     "Go, we've got you covered",
                     size="8",
-                    weight="bold",
-                    color=BASE_COLORS.WHITE.value,
+                    color=BASE_COLORS.LIGHT_RED.value,
                     as_="h2"
                 ),
                 rx.heading(
                     "@logisticawoodward",
                     size="5",
-                    weight="bold",
-                    color=BASE_COLORS.YELLOW.value,
+                    color=BASE_COLORS.DARK_WHITE.value,
                     margin_top="0",
                     as_="h1"
                 ),
@@ -35,7 +33,7 @@ def header() -> rx.Component:
             spacing="5",
         ),
         rx.flex(
-            headband("+14", "años de experiencia"),
+            headband("+85", "años de experiencia"),
             headband("+14", "años de experiencia"),
             headband("+14", "años de experiencia"),
             width="100%",

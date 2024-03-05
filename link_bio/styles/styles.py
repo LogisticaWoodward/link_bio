@@ -1,15 +1,9 @@
 import reflex as rx
 from enum import Enum
+from .colors import BASE_COLORS as Color
 
 # Constants
 MAX_WIDTH = "600px"
-
-# Colors
-class BASE_COLORS(Enum):
-    WHITE = "#FCFCFC"
-    RED = "#ED1C24"
-    BLUE = "#00509C"
-    YELLOW = "#FA9F42"
 
 # Sizes
 class Size(Enum):
@@ -20,28 +14,36 @@ class Size(Enum):
 
 # Styles
 BASE_STYLE = {
+    "font_family": ["Work Sans", "sans-serif"],
+    "background_color": Color.BLUE.value,
     rx.button: {
+        "background_color": Color.LIGHT_BLUE.value,
         "width": "100%",
         "height": "100%",
         "display": "block",
         "padding": Size.SMALL.value,
+        "_hover": {
+            "background_color": Color.DARK_BLUE.value,
+        }
     },
     rx.text: {
-        "color": BASE_COLORS.WHITE.value
+        "color": Color.WHITE.value
     }
 }
 
 title_style = dict(
     width="100%",
-    color=BASE_COLORS.WHITE.value,
+    color=Color.WHITE.value,
     padding_top=Size.DEFAULT.value
 )
 
 button_title_style = dict(
     font_size=Size.DEFAULT.value,
+    color=Color.WHITE.value,
     font_weight="bold"
 )
 
 button_body_style = dict(
-    font_size=Size.MEDIUM.value
+    font_size=Size.MEDIUM.value,
+    color= Color.DARK_WHITE.value,
 )

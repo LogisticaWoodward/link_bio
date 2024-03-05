@@ -6,7 +6,6 @@ from link_bio.views.links.links import links
 from link_bio.components.footer import footer
 import link_bio.styles.styles as styles
 from link_bio.styles.styles import Size
-from link_bio.styles.styles import BASE_COLORS
 
 
 class State(rx.State):
@@ -25,10 +24,8 @@ def index() -> rx.Component:
                 margin_y=Size.BIG.value,
                 align="center",
             ),
-            background_color=BASE_COLORS.BLUE.value
         ),
         footer(),
-        background_color=BASE_COLORS.BLUE.value,
     )
 
 

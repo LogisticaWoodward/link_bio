@@ -1,7 +1,7 @@
 import reflex as rx
 import datetime
 from link_bio.styles.styles import Size
-from link_bio.styles.styles import BASE_COLORS
+from link_bio.styles.colors import BASE_COLORS
 
 
 def footer() -> rx.Component:
@@ -19,7 +19,7 @@ def footer() -> rx.Component:
         ),
         rx.text(
             f"© {datetime.date.today().year} Logística Woodward, SC",
-            color=BASE_COLORS.WHITE.value,
+            color=BASE_COLORS.DARK_WHITE.value,
             font_weight="bold",
         ),
         align="center",
