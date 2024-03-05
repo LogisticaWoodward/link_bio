@@ -8,8 +8,8 @@ def headband(title: str, body: str) -> rx.Component:
         rx.text(
             title,
             weight="bold",
-            color=BASE_COLORS.LIGHT_RED.value,
+            color=BASE_COLORS.GAMBOGE.value,
             as_="span",
         ),
-        f" {body}", font_size=Size.MEDIUM.value, color=BASE_COLORS.WHITE.value,
+        f" {body}", font_size=Size.MEDIUM.value, color=BASE_COLORS.WHITE.value, font_weight="bold",
     )

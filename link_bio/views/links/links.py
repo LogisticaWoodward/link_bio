@@ -10,13 +10,13 @@ def links() -> rx.Component:
         link_button(
             "Whatsapp",
             "Ponte en contacto con nosotros",
-            "http://www.woodward.mx",
+            "https://wa.me/523141449133?text=Hello, I'm interested about LW's services",
             "message-circle-more",
         ),
         link_button(
             "Email",
             "contacto@woodward.mx",
-            "http://www.woodward.mx",
+            "mailto:contacto@woodward.mx",
             "mail",
         ),
         title("Redes sociales"),
@@ -34,7 +34,7 @@ def links() -> rx.Component:
         ),
         link_button(
             "Facebook Recursos Humanos",
-            "Mira nuestras últimas vacantes!",
+            "Entérate de nuestras últimas vacantes!",
             "https://www.facebook.com/profile.php?id=61556152593471",
             "facebook",
         ),
@@ -52,7 +52,7 @@ def links() -> rx.Component:
         ),
         link_button(
             "LinkedIn",
-            "Mira nuestras últimas vacantes!",
+            "Conecta con profesionales de la industria",
             "https://www.linkedin.com/company/logisticawoodward/",
             "linkedin",
         ),

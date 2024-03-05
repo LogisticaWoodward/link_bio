@@ -14,8 +14,11 @@ class Size(Enum):
 
 # Styles
 BASE_STYLE = {
-    "font_family": ["Work Sans", "sans-serif"],
+    "font_size": "18px",
     "background_color": Color.BLUE.value,
+    rx.heading: {
+        "font_weight": "bold",
+    },
     rx.button: {
         "background_color": Color.LIGHT_BLUE.value,
         "width": "100%",
@@ -38,12 +41,12 @@ title_style = dict(
 )
 
 button_title_style = dict(
-    font_size=Size.DEFAULT.value,
+    font_size="18px",
     color=Color.WHITE.value,
     font_weight="bold"
 )
 
 button_body_style = dict(
-    font_size=Size.MEDIUM.value,
+    font_size="16px",
     color= Color.DARK_WHITE.value,
 )

@@ -17,12 +17,12 @@ def header() -> rx.Component:
                 rx.heading(
                     "Go, we've got you covered",
                     size="8",
-                    color=BASE_COLORS.LIGHT_RED.value,
+                    color=BASE_COLORS.GAMBOGE.value,
                     as_="h2"
                 ),
                 rx.heading(
                     "@logisticawoodward",
-                    size="5",
+                    size="6",
                     color=BASE_COLORS.DARK_WHITE.value,
                     margin_top="0",
                     as_="h1"
@@ -47,6 +47,6 @@ def header() -> rx.Component:
                 servicios aduanales; somos aliados estratégicos de las empresas.
                 Nos dedicamos a entender y atender las necesidades específicas
                 de cada cliente, asegurando que sus operaciones sean sinónimo de
-                eficiencia y confiabilidad.""", as_="p"),
+                eficiencia y confiabilidad.""", weight="medium", as_="p"),
         spacing="3",
     )
