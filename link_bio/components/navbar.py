@@ -8,6 +8,7 @@ def navbar() -> rx.Component:
         rx.link(
             rx.image(src="/logo_full.png", width="160px", height="auto"),
             href="#",
+            margin_left="15em"
         ),
         position="sticky",
         top="0",
