@@ -34,8 +34,8 @@ def header() -> rx.Component:
         ),
         rx.flex(
             headband("+85", "años de experiencia"),
-            headband("+14", "años de experiencia"),
-            headband("+14", "años de experiencia"),
+            headband("+5,000", "TU's anuales"),
+            headband("+15,000", "guías aéres anuales"),
             width="100%",
             direction="row",
             justify="between"
