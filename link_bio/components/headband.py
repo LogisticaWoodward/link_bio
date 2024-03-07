@@ -11,5 +11,9 @@ def headband(title: str, body: str) -> rx.Component:
             color=BASE_COLORS.GAMBOGE.value,
             as_="span",
         ),
-        f" {body}", font_size=Size.MEDIUM.value, color=BASE_COLORS.WHITE.value, font_weight="bold",
+        f" {body}",
+        text_align="center",
+        font_size=Size.MEDIUM.value,
+        color=BASE_COLORS.WHITE.value,
+        font_weight="bold",
     )

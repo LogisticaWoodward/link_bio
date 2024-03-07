@@ -16,8 +16,9 @@ def notices() -> rx.Component:
                 "t21.jpg",
                 "https://t21.com.mx/los-100-influyentes-del-transporte-y-la-logistica-reconoce-a-empresarios-que-estan-cambiando-al-pais/"
             ),
+            width="100%",
+            justify="between",
         ),
         width="100%",
-        align="start",
         spacing="3",
     )

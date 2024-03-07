@@ -1,5 +1,6 @@
 import reflex as rx
 from link_bio.components.headband import headband
+from link_bio.styles.styles import Size
 from link_bio.styles.colors import BASE_COLORS
 
 
@@ -9,7 +10,9 @@ def header() -> rx.Component:
             rx.avatar(
                 src="logo.svg",
                 fallback="LW",
-                size="9",
+                # size="9",
+                width=Size.AVATAR.value,
+                height=Size.AVATAR.value,
                 radius="small",
                 border=f"1px solid {BASE_COLORS.WHITE.value}",
             ),
@@ -32,21 +35,20 @@ def header() -> rx.Component:
             align="center",
             spacing="5",
         ),
-        rx.flex(
+        rx.hstack(
             headband("+85", "años de experiencia"),
             headband("+5,000", "TU's anuales"),
             headband("+15,000", "guías aéres anuales"),
             width="100%",
-            direction="row",
+            white_space="normal",
             justify="between"
         ),
         rx.text(
             "En ",
             rx.text.strong("Logística Woodward"),
-            """, no solo somos proveedores de
-                servicios aduanales; somos aliados estratégicos de las empresas.
-                Nos dedicamos a entender y atender las necesidades específicas
+            """, nos dedicamos a entender y atender las necesidades específicas
                 de cada cliente, asegurando que sus operaciones sean sinónimo de
-                eficiencia y confiabilidad.""", size="2", as_="p"),
+                eficiencia y confiabilidad.""", size="3", as_="p"),
         spacing="3",
+        width="100%",
     )

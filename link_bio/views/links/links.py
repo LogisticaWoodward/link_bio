@@ -22,9 +22,9 @@ def links() -> rx.Component:
         title("Redes sociales"),
         link_button(
             "Sitio web",
-            "Encuentra artículos especializados dentro de nuestro blog",
+            "Encuentra artículos especializados",
             "http://www.woodward.mx",
-            "globe",
+            "layout-template",
         ),
         link_button(
             "Síguenos en Facebook",
@@ -34,13 +34,13 @@ def links() -> rx.Component:
         ),
         link_button(
             "Facebook Recursos Humanos",
-            "Entérate de nuestras últimas vacantes!",
+            "Entérate de nuestras últimas vacantes",
             "https://www.facebook.com/profile.php?id=61556152593471",
             "facebook",
         ),
         link_button(
             "Instagram",
-            "Mira las fotos de nuestros eventos más recientes",
+            "Mira nuestros eventos más recientes",
             "https://www.instagram.com/logisticawoodward/",
             "instagram",
         ),

@@ -10,7 +10,7 @@ def link_button(title: str, body: str, url: str, tag_icon: str) -> rx.Component:
             rx.hstack(
                 rx.icon(
                     tag=tag_icon,
-                    size=35,
+                    size=30,
                     margin=Size.SMALL.value,
                     stroke_width=1.5,
                     color=Color.DARK_WHITE.value
@@ -21,7 +21,8 @@ def link_button(title: str, body: str, url: str, tag_icon: str) -> rx.Component:
                     spacing="0",
                 ),
                 width="100%",
-                align="center"
+                align="center",
+                justify="start",
             ),
         ),
         href=url,

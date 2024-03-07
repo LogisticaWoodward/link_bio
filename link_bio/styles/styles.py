@@ -3,7 +3,7 @@ from enum import Enum
 from .colors import BASE_COLORS as Color
 
 # Constants
-MAX_WIDTH = "600px"
+MAX_WIDTH = "632px"
 
 # Sizes
 class Size(Enum):
@@ -11,6 +11,7 @@ class Size(Enum):
     MEDIUM = "0.8em"
     DEFAULT = "1em"
     BIG = "2em"
+    AVATAR = "4em"
     VERY_BIG = "22em"
     BIGGER = "25em"
 
@@ -30,7 +31,8 @@ BASE_STYLE = {
         "background_color": Color.LIGHT_BLUE.value,
         "width": "100%",
         "height": "100%",
-        "display": "block",
+        "white_space": "normal",
+        "text_align": "start",
         "padding": Size.SMALL.value,
         "_hover": {
             "background_color": Color.DARK_BLUE.value,
