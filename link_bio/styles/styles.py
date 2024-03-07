@@ -11,12 +11,19 @@ class Size(Enum):
     MEDIUM = "0.8em"
     DEFAULT = "1em"
     BIG = "2em"
+    VERY_BIG = "22em"
+    BIGGER = "25em"
+
+STYLESHEETS = [
+    "https://fonts.googleapis.com/css?family=Poppins:wght@300;500&display=swap"
+]
 
 # Styles
 BASE_STYLE = {
-    "font_size": "18px",
+    "font_family": "Poppins",
     "background_color": Color.BLUE.value,
     rx.heading: {
+        "font_family": "Poppins",
         "font_weight": "bold",
     },
     rx.button: {
@@ -30,23 +37,23 @@ BASE_STYLE = {
         }
     },
     rx.text: {
-        "color": Color.WHITE.value
+        "font_family": "Poppins-Light",
+        "color": Color.WHITE.value,
+    },
+    rx.text.strong: {
+        "font_family": "Poppins-Light",
     }
 }
 
 title_style = dict(
     width="100%",
-    color=Color.WHITE.value,
     padding_top=Size.DEFAULT.value
 )
 
 button_title_style = dict(
-    font_size="18px",
     color=Color.WHITE.value,
-    font_weight="bold"
 )
 
 button_body_style = dict(
-    font_size="16px",
     color= Color.DARK_WHITE.value,
 )

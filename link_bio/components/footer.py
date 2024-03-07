@@ -20,7 +20,6 @@ def footer() -> rx.Component:
         rx.text(
             f"© {datetime.date.today().year} Logística Woodward, SC",
             color=BASE_COLORS.DARK_WHITE.value,
-            font_weight="bold",
         ),
         align="center",
         padding_bottom=Size.BIG.value,
