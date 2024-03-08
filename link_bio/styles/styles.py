@@ -25,7 +25,7 @@ BASE_STYLE = {
     "background_color": Color.BLUE.value,
     rx.heading: {
         "font_family": "Poppins",
-        "font_weight": "bold",
+        "font_weight": "400",
     },
     rx.button: {
         "font_family": "Poppins",
@@ -45,6 +45,7 @@ BASE_STYLE = {
     },
     rx.text.strong: {
         "font_family": "Poppins",
+        "font_weight": "500",
     }
 }
 

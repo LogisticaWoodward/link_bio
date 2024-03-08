@@ -25,6 +25,7 @@ def header() -> rx.Component:
                 rx.heading(
                     "@logisticawoodward",
                     size="5",
+                    font_weight="500",
                     color=BASE_COLORS.DARK_WHITE.value,
                     margin_top="0",
                     as_="h1"
@@ -47,7 +48,7 @@ def header() -> rx.Component:
             rx.text.strong("Logística Woodward"),
             """, nos dedicamos a entender y atender las necesidades específicas
                 de cada cliente, asegurando que sus operaciones sean sinónimo de
-                eficiencia y confiabilidad.""", size="3", as_="p"),
+                eficiencia y confiabilidad.""", font_weight="300", size="3", as_="p"),
         spacing="3",
         width="100%",
     )
