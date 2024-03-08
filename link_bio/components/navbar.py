@@ -6,7 +6,12 @@ from link_bio.styles.colors import BASE_COLORS
 def navbar() -> rx.Component:
     return rx.hstack(
         rx.link(
-            rx.image(src="/logo_full.png", width="160px", height="auto"),
+            rx.image(
+                src="/logo_full.png",
+                width="160px",
+                height="auto",
+                alt="Logotipo de Logística Woodward. Bandera náutica que corresponde a la letra \"dobleu\".",
+            ),
             href="#",
         ),
         position="sticky",

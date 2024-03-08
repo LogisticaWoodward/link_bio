@@ -9,10 +9,11 @@ def footer() -> rx.Component:
         rx.link(
             rx.image(
                 src="/logo.svg",
-                width="30px",
-                height="30px",
+                width=Size.BIG.value,
+                height=Size.BIG.value,
                 border="0.5px solid #fff",
-                border_radius="5px"
+                border_radius="5px",
+                alt="Logotipo de Logística Woodward. Bandera náutica que corresponde a la letra \"dobleu\".",
             ),
             href="http://www.woodward.mx",
             is_external=True,

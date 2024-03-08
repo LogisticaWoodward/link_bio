@@ -10,7 +10,6 @@ def header() -> rx.Component:
             rx.avatar(
                 src="logo.svg",
                 fallback="LW",
-                # size="9",
                 width=Size.AVATAR.value,
                 height=Size.AVATAR.value,
                 radius="small",
