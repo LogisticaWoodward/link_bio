@@ -22,7 +22,7 @@ def index() -> rx.Component:
                 header(),
                 links(),
                 notices(),
-                webcam("https://www.youtube.com/live/ty1ZyO9uHRw?si=kT14_NGfIm43nqWN"),
+                # webcam("https://www.youtube.com/live/ty1ZyO9uHRw?si=kT14_NGfIm43nqWN"),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_top=Size.BIG.value,
