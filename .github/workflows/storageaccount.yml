@@ -1,0 +1,45 @@
+name: Deploy Static Website to Azure Storage Account
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  AZURE_STORAGE_ACCOUNT_NAME: woodwardlinkbioprodapp
+  AZURE_STORAGE_CONTAINER_NAME: '$web'
+  AZURE_STORAGE_CONNECTION_STRING: DefaultEndpointsProtocol=https;AccountName=woodwardlinkbioprodapp;AccountKey=sXJwv8K5qe+bf4LWbm3pLcHPixcC0cwHl9RCC5XxiIs5QkwJDy2TXcHnaroveJeSSMa9HryakIom+AStVR1FhA==;EndpointSuffix=core.windows.net
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          reflex init
+         
+      - name: Install dependencies
+        run: |
+          reflex export --frontend-only
+          rm -fr public
+          unzip frontend.zip -d public
+          rm -f frontend.zip
+
+      # Aquí puedes añadir pasos adicionales para construir tu proyecto Python si es necesario
+      
+      - name: Deploy to Azure Storage Account
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob upload-batch --destination $AZURE_STORAGE_CONTAINER_NAME --source ./public --account-name $AZURE_STORAGE_ACCOUNT_NAME --connection-string "$AZURE_STORAGE_CONNECTION_STRING" --overwrite
