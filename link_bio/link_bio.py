@@ -10,10 +10,6 @@ import link_bio.styles.styles as styles
 from link_bio.styles.styles import Size
 
 
-class State(rx.State):
-    pass
-
-
 def index() -> rx.Component:
     return rx.box(
         navbar(),
